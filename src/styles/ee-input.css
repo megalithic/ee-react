@@ -1,0 +1,67 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  width: 120px;
+  height: 34px;
+  margin: 5px 0;
+  display: block;
+  outline: none;
+}
+:host([disabled]) {
+  pointer-events: none;
+  opacity: 0.7;
+}
+:host([hidden]) {
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  background: #d6d6d6;
+  border: 1px solid transparent;
+  padding: 0 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  color: #616161;
+  font-weight: 600;
+}
+input:focus {
+  border: 1px solid rgb(23, 23, 21);
+  outline: 3px solid #238be7;
+  outline-offset: 0px;
+  background: white;
+}
+input:focus:invalid {
+  outline-color: #ed5c49;
+}
+input::selection {
+  background: transparent;
+}
+input:focus::selection {
+  background: #8fc9fc;
+}
+input:focus:invalid::selection {
+  background: #ffc3c3;
+}
+:host([mixed]) input:not(:focus) {
+  color: rgba(0,0,0, 0.65);
+}

@@ -1,0 +1,72 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+  height: 36px;
+  cursor: default;
+}
+:host(:focus) {
+  outline: none;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  background: #404040;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  touch-action: none;
+  cursor: default;
+  z-index: 999;
+}
+#overlay[hidden] {
+  display: none;
+}
+
+#selected-item-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+:host([opened]) #selected-item-view {
+  z-index: 1000;
+}
+
+#popup {
+  display: flex;
+  flex-direction: column;
+  background: #404040;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+:host([opened])  #popup {
+  visibility: visible;
+  pointer-events: all;
+}
+
+::slotted(ee-brandselectitem:not(:last-child)) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

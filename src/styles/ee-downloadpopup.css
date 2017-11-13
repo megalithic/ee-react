@@ -1,0 +1,201 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  position: fixed;
+  width: 255px;
+  top: 62px;
+  right: 60px;
+  z-index: 99999;
+}
+:host([opened]) {
+  display: block;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  touch-action: none;
+  cursor: default;
+  z-index: 999;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 18px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 12px;
+  z-index: 1001;
+  box-shadow: 2px 2px 27px 0px rgba(50, 50, 50, 0.4);
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+}
+
+main::before {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -4.5px;
+  top: -3px;
+  right: 110px;
+  bottom: auto;
+  left: auto;
+  border-style: solid;
+  border-width: 0 15px 15px;
+  border-color: white transparent;
+  content: "";
+}
+
+/**
+ * Select view
+ */
+
+#select-view .header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+#select-view h3 {
+  margin: 0;
+  color: #4c5152;
+  font-weight: 400;
+}
+
+#select-view #info-button {
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  --icon-size: 20px;
+  --icon-color: rgba(0, 0, 0, 0.2);
+}
+
+#select-view #select {
+  color: black;
+  margin-bottom: 8px;
+}
+
+#select-view input[type="checkbox"] {
+ height:24px;
+ width: 24px;
+ position:relative;
+ margin-right: 8px;
+ border: 2px solid rgba(0, 0, 0, 0.1);
+ -webkit-appearance: none;
+}
+#select-view input[type="checkbox"]:focus {
+  outline: none;
+}
+#select-view input[type="checkbox"]:before {
+ position: absolute;
+ top: 0px;
+ left: 1px;
+ width: 100%;
+ height: 100%;
+ font-weight: 700;
+ font-size: 12px;
+ line-height: 20px;
+ text-align: center;
+ color: #ea8917;
+ content: " ";
+}
+#select-view input[type="checkbox"]:checked:before {
+ content: "✔";
+}
+
+#select-view #confirm {
+  color: rgba(0, 0, 0, 0.43);
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+#select-view #confirm a {
+  color: #ff9a00;
+  text-decoration: none;
+  padding-left: 4px;
+}
+#select-view #confirm a:hover {
+  text-decoration: underline;
+}
+
+#select-view #download-button {
+  --primary-color: #ff9a00;
+  border-bottom: 3px solid #dd8400;
+  cursor: default;
+}
+#select-view #download-button:hover {
+  cursor: default;
+}
+#select-view #download-button[disabled] {
+  background: #ccc;
+  border-bottom: 3px solid #aaa;
+  color: #555;
+  cursor: default;
+}
+
+/**
+ * Info view
+ */
+
+#info-view #back {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+#info-view #back-button {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  --icon-size: 20px;
+  --icon-color: rgba(0, 0, 0, 0.2);
+}
+
+#info-view p {
+  font-size: 13px;
+}
+#info-view p:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Empty view
+ */
+
+#empty-view h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #4c5152;
+  font-weight: 400;
+}
+
+#empty-view p {
+  font-size: 13px;
+  text-align: center;
+}
+
+#empty-view #ok-button {
+  --primary-color: #e7ebed;
+  --font-size: 15px;
+  border-bottom: 3px solid #dbe1e4;
+  color: rgba(0, 0, 0, 0.6);
+}
+#empty-view #ok-button:hover {
+  --primary-color: #e0e0e0;
+}

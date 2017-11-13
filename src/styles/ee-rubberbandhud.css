@@ -1,0 +1,24 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  display: none;
+  contain: size layout style paint;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+rect {
+  fill: rgba(187, 199, 212, 0.3);
+  stroke: rgba(187, 199, 212, 0.8);
+  stroke-width: 1;
+  visibility: hidden;
+  pointer-events: none;
+  shape-rendering: crispEdges;
+  vector-effect: non-scaling-stroke;
+}

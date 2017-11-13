@@ -1,0 +1,44 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+}
+:host([enabled]) {
+  display: block;
+}
+
+ee-slider {
+  width: 100%;
+}
+
+/**
+ * Size section
+ */
+
+:host-context(te-editor) #size-section {
+  display: none;
+}
+
+#size-section > label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#size-section > div {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+#size-section > div > label {
+  margin: 0 6px 0 0;
+  color: #a8a8a8;
+}
+
+#height-slider {
+  margin-right: 10px;
+}

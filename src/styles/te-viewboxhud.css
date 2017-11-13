@@ -1,0 +1,43 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  display: none;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+:host([editable][enabled]) #outline {
+  stroke-dasharray: 3;
+}
+:host([editable][enabled]) #outline {
+  display: initial;
+}
+
+#outline {
+  fill: none;
+  opacity: 1;
+  stroke: rgba(255, 255, 255, 0.65);
+  stroke-width: 1;
+  pointer-events: none;
+  vector-effect: non-scaling-stroke;
+}
+
+#label {
+  pointer-events: none;
+}
+
+#label-background {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+#label-text {
+  font-size: 65px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  fill: white;
+}

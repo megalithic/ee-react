@@ -1,0 +1,119 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+}
+:host([enabled]) {
+  display: block;
+}
+
+ee-slider {
+  width: 100%;
+}
+
+/**
+ * Size section
+ */
+
+#size-section {
+}
+
+#size-section > label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#size-section > div {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+#size-section > div > label {
+  margin: 0 6px 0 0;
+  color: #a8a8a8;
+}
+
+#height-slider {
+  margin-right: 10px;
+}
+
+/**
+ * Fill section
+ */
+
+#fill-section {
+}
+
+/**
+ * Stroke section
+ */
+
+#stroke-section {
+}
+
+/**
+ * Arrange section
+ */
+
+#arrange-section {
+}
+
+#arrange-label {
+  display: block;
+  margin-bottom: 7px;
+}
+
+#arrange-buttons {
+  display: flex;
+  flex-flow: row;
+}
+
+#arrange-buttons ee-button {
+  cursor: pointer;
+  width: 25%;
+  margin-left: 8px;
+  height: 40px;
+}
+#arrange-buttons ee-button:first-child {
+  margin-left: 0;
+}
+
+#alignment-buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+#alignment-buttons ee-button {
+  color: #C6C8CC;
+  cursor: pointer;
+  width: 29px;
+  height: 29px;
+  margin-left: 6px;
+  --icon-size: 18px;
+}
+#alignment-buttons ee-button:first-child {
+  margin-left: 0;
+}
+
+/**
+ * Switches section
+ */
+
+#switches-section .row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#switches-section .row:last-child {
+  margin-bottom: 0;
+}
+
+#switches-section ee-switch {
+  margin-left: auto;
+}

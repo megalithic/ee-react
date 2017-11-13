@@ -1,0 +1,72 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  display: none;
+  outline: none;
+  contain: size layout style paint;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+#grippies {
+  cursor: default;
+}
+
+.node-grippie {
+  fill: #A6A6A6;
+  stroke: white;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-dark-3);
+}
+.node-grippie:hover {
+}
+.node-grippie[data-selected] {
+  fill: #7C7CFF;
+}
+:host(:focus) .node-grippie[data-selected] {
+  fill: blue;
+}
+:host([passive]) .node-grippie[data-position="start"],
+:host([passive]) .node-grippie[data-position="end"] {
+  fill: red;
+}
+:host([passive]) .node-grippie:not([data-position]) {
+  display: none;
+}
+
+.outline-grippie {
+  fill: none;
+  stroke: blue;
+  stroke-width: 6;
+  vector-effect: non-scaling-stroke;
+  opacity: 0;
+}
+.outline-grippie:hover {
+  opacity: 0.1;
+}
+:host([passive]) .outline-grippie {
+  display: none;
+}
+
+.control-grippie {
+  fill: red;
+  stroke: white;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-dark-3);
+}
+
+.control-line {
+  stroke: red;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  opacity: 0.3;
+}

@@ -1,0 +1,217 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  contain: layout style paint;
+  background: white;
+  border: 1px solid #929292;
+  border-radius: 20px;
+  top: 20px;
+  width: 700px;
+  height: calc(100% - 40px);
+  padding: 0;
+}
+:host(:focus) {
+  outline: none;
+}
+:host::backdrop {
+  background: rgba(53, 53, 53, 0.34902);
+}
+
+main {
+  padding: 35px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#header {
+  background: #faffa9;
+  border: 1px solid #dce1a9;
+  color: #ffa900;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+#header p {
+  margin: 13px 18px;
+  font-size: 17px;
+}
+
+#items {
+  margin: 0 0 25px 0;
+  padding: 2px 8px 0 0;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.item {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-bottom: 45px;
+}
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item .close-button {
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
+  display: block;
+  margin-right: 10px;
+  cursor: pointer;
+  fill: #a9a9a9;
+}
+.item:only-child .close-button {
+  visibility: hidden;
+}
+.item .close-button:hover {
+  fill: #757575;
+}
+
+.item .close-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.item .duplicate-button {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
+  display: block;
+  margin-left: 25px;
+  margin-top: 22px;
+  cursor: pointer;
+  align-self: flex-start;
+  fill: #a9a9a9;
+}
+.item .duplicate-button:hover {
+  fill: #757575;
+}
+.item:last-child .duplicate-button {
+  visibility: hidden;
+}
+
+.item .duplicate-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.item .thumbnail {
+  display: block;
+  width: 125px;
+  height: 125px;
+  min-width: 80px;
+  margin-right: 25px;
+  background: url(/components/eezy-editor/images/checkboard.png) repeat 0 0;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+.item .metadata {
+  flex: 1;
+}
+
+.title-div {
+  height: 29px;
+  position: relative;;
+}
+
+.title-div .title-input {
+  width: 100%;
+  height: 31px;
+  padding: 3px 11px;
+  box-sizing: border-box;
+}
+
+.title-div .title-error {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: red;
+}
+
+.keywords-div {
+  margin-top: 25px;
+  height: 84px;
+  position: relative;;
+}
+
+.keywords-div .keywords-input {
+  height: 100%;
+}
+
+.keywords-div .keywords-error {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: red;
+}
+
+#buttons {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+}
+
+#buttons #cancel-button {
+  --primary-color: #ff9a00;
+  margin-left: 8px;
+}
+
+#rules-dialog {
+  background: white;
+  border: 1px solid #929292;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  padding: 40px;
+}
+#rules-dialog::backdrop {
+  background: rgba(53, 53, 53, 0.34902);
+}
+
+#rules-dialog #rules {
+  height: calc(100% - 60px);
+}
+
+#rules-dialog h3 {
+  color: #797979;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+#rules-dialog h3:first-child {
+  margin-top: 0;
+}
+
+#rules-dialog ul {
+  padding: 0;
+  margin-left: 18px;
+  margin-top: 0;
+}
+
+#rules-dialog li {
+  color: #797979;
+  font-size: 13px;
+}
+
+#rules-dialog #close-rules-button {
+  --primary-color: #ff9a00;
+}

@@ -1,0 +1,76 @@
+
+/*
+ * @info
+ *   Menubar skin (the horizontal bar shown at the top of the editor, contains buttons suchas "File", "Undo",
+ *  "Download", etc.
+ *
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  outline: none;
+}
+
+main {
+  background: #1fceaf;
+  color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  -webkit-user-select: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: black;
+  opacity: 0.1;
+}
+#overlay[hidden] {
+  display: none;
+}
+
+#logo {
+  display: block;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+#logo img {
+  width: 95px;
+}
+
+#app-name a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#primary-buttons {
+  display: flex;
+  margin-left: 14px;
+}
+
+#primary-buttons ee-button {
+  width: auto;
+  --font-size: 16px;
+}
+
+#secondary-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+#secondary-buttons #download-button {
+  margin-right: 8px;
+  --font-size: 16px;
+}
+
+#exit-button {
+  --font-size: 16px;
+}

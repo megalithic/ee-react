@@ -1,0 +1,97 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+  height: 34px;
+  contain: layout style;
+}
+:host([hidden]) {
+  display: none;
+}
+
+main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+  color: #333333;
+}
+:host([disabled]) main {
+  opacity: 0.6;
+}
+:host([highlighted]) main {
+  background: #deebf7;
+}
+
+#state-icons {
+  width: 12px;
+  height: 12px;
+  align-self: center;
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+#state-icons .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: #333333;
+  stroke: #333333;
+}
+#state-icons .icon[hidden] {
+  display: none;
+}
+
+#selected-state-icon {
+  transform: scale(0.65);
+}
+
+#label {
+  box-sizing: border-box;
+  overflow: hidden;
+  align-self: center;
+  flex: 1;
+  margin: 0 0 0 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+}
+
+#shortcut {
+  box-sizing: border-box;
+  margin: 0 5px;
+  min-width: 25px;
+  text-align: right;
+  align-self: center;
+  display: none;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 13px;
+}
+#shortcut:empty {
+  margin-right: 0px;
+}
+:host(:empty) #shortcut {
+  display: block;
+}
+
+#arrow-icon {
+  display: block;
+  width: 8px;
+  height: 8px;
+  align-self: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  fill: #333333;
+  stroke: #333333;
+}
+:host(:empty) #arrow-icon {
+  display: none;
+}

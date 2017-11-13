@@ -1,0 +1,68 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  display: none;
+  contain: size layout style paint;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+.subhud:focus {
+  outline: none;
+}
+
+.slider {
+  stroke: white;
+  stroke-width: 7;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  outline: none;
+}
+
+.slider-shadow {
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-width: 10;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  outline: none;
+}
+
+.stop-grippie {
+  fill: black;
+  stroke: white;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-dark-2);
+}
+.stop-grippie[data-selected] {
+  stroke: rgb(186, 186, 186); /* gray */
+}
+.subhud:focus .stop-grippie[data-selected] {
+  stroke: rgb(147, 210, 255); /* blue */
+}
+
+.r2-outline {
+  fill: none;
+  stroke: rgb(46, 102, 249);
+  stroke-width: 1.5;
+  stroke-dasharray: 5, 5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  outline: none;
+  pointer-events: none;
+}
+
+.r2-grippie {
+  fill: rgb(46, 102, 249);
+  stroke: white;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-dark-2);
+}

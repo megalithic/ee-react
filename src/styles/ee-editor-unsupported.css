@@ -1,0 +1,86 @@
+/* styles unsupported browsers */
+
+.no-editor-sections {
+  width: initial;
+  height: initial;   
+}
+.no-editor-sections * {
+  width: initial;
+  height: initial;  
+  box-sizing: border-box;
+}
+.no-editor-sections .max-inner {
+  display: block;
+  margin: auto;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+}
+.no-editor-section {
+
+}
+
+.no-editor-section.no-editor__header {
+  background-color: #FF982A;
+  text-align: center;
+  padding-bottom: 200px;
+}
+.no-editor-section .no-editor__logo {
+  width: 142px;
+  margin: 50px auto;
+}
+.no-editor-section.no-editor__header .section-title {
+  color: #fff;  
+  font: 700 48px "proxima-nova", "ProximaNova-Regular", Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+.no-editor-section.no-editor__header .section-subtitle {
+  color: #fff;
+  font: normal 22px/26px "proxima-nova", ProximaNova-Regular, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  margin-top: 13px;  
+}
+
+.supported-browser-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.supported-browser-button {
+  background: #fff;
+  display: inline-block;
+  margin-top: 33px;
+  margin-right: 10px;
+  margin-left: 10px;  
+  width: 171px;
+  height: 46px;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  border: 2px solid #FFF;
+  border-radius: 3px;
+}
+.supported-browser-button span {
+  color: #57585E;
+  display: inline;
+  font: 700 17px/46px "proxima-nova", ProximaNova-Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  margin-right: 15px;  
+}
+.supported-browser-button img {
+  display: inline;
+  line-height: 46px;
+  height: 30px;
+  width: 30px;
+}
+.supported-browser-button:hover {
+  -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+     -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);  
+}
+
+.no-editor-section.no-editor__content {
+  background: #fff;
+  text-align: center;
+}
+.no-editor-section.no-editor__content .eezy-editor-browser {
+  margin: -142px auto 0;
+  max-width: 100%; 
+}

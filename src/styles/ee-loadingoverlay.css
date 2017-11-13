@@ -1,0 +1,50 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+}
+:host([enabled]) {
+  display: block;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  touch-action: none;
+  cursor: default;
+  z-index: 999998;
+}
+
+#foreground {
+  contain: strict;
+  width: 400px;
+  height: 250px;
+  background: white;
+  position: fixed;
+  left: calc(50% -  400px / 2);
+  top: calc(50% - 250px / 2);
+  z-index: 999999;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+}
+
+img {
+  margin: 30px auto 20px auto;
+  display: block;
+}
+
+h4 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}

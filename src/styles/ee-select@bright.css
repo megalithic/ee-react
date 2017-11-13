@@ -1,0 +1,105 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+  height: 36px;
+  cursor: default;
+  color: #ccc;
+  font-size: 13px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+}
+:host(:focus) {
+  outline: none;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  touch-action: none;
+  cursor: default;
+  z-index: 999;
+}
+#overlay[hidden] {
+  display: none;
+}
+
+#button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 0 14px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+}
+#button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+:host([opened]) #button {
+  border-radius: 4px 4px 0 0;
+  border-bottom-color: transparent;
+  z-index: 1000;
+}
+
+#button ee-label {
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 1;
+  pointer-events: none;
+}
+
+#button #arrow-icon {
+  width: 10px;
+  height: 10px;
+  fill: rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  padding-left: 7px;
+}
+
+#popup {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1000;
+}
+:host([opened])  #popup {
+  visibility: visible;
+  pointer-events: all;
+}

@@ -1,0 +1,43 @@
+
+/*
+ * @info
+ *   The root element of the Eezy Editor.
+ *
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+}
+:host([enabled]) {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background: #ebeced;
+}
+
+#workspace {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+#canvas {
+  flex: 1;
+}
+
+#primary-sidebar {
+  flex: 0;
+  border-top: 1px solid #2b2b2b;
+}

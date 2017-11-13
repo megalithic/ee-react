@@ -1,0 +1,171 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  min-width: 280px;
+  overflow: auto;
+}
+
+main {
+  background: #232323;
+  color: #ccc;
+  height: 100%;
+  user-select: none;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+main > section {
+  padding: 15px 20px;
+}
+
+#type-section {
+  background: #2b2b2b;
+  padding-bottom: 5px;
+}
+
+#brand-section {
+  background: #2b2b2b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 20px;
+}
+
+#color-section {
+  background: #2b2b2b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 20px;
+}
+
+#details-section {
+  background: #2b2b2b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  color: #b9b9b9;
+}
+
+#details-headers {
+  display: flex;
+  flex-flow: row;
+}
+
+#details-headers h3 {
+  text-transform: none;
+}
+#details-headers #size-header {
+  width: 75px;
+  margin-left: 4px;
+  margin-right: 38px;
+}
+#details-headers #color-header {
+  width: 65px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#details .detail {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  outline: 1px solid #404040;
+}
+
+#details ee-select {
+  margin: 5px 4px;
+}
+
+#details .size-select {
+  flex: 1.25;
+}
+
+#details .quantity-input {
+  flex: 1;
+}
+
+#details .close-button {
+  width: 24px;
+  height: 24px;
+  --icon-size: 10px;
+  padding-right: 10px;
+  padding-left: 6px;
+  flex: 0;
+}
+#details .close-button:hover {
+  --icon-color: #ff0d30;
+}
+
+#add-button {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ff0d30;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  background: none;
+  color: white;
+  outline: none;
+}
+#add-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+#add-button:active {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+#cost {
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 700;
+  margin: 7px 0 12px 0;
+}
+
+#amount {
+  color: #1fceae;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+#shipping {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+}
+
+#buy-button {
+  background: #1fceae;
+  color: #232323;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  margin-top: 30px;
+}
+#buy-button:hover {
+  background: #41d6bb;
+  cursor: pointer;
+}
+#buy-button:active {
+  background: #48f7d7;
+}

@@ -1,0 +1,80 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  height: 100%;
+}
+:host([enabled]) {
+  display: block;
+}
+
+/**
+ * Presets section
+ */
+
+#presets-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#presets-label {
+  color: #868686;
+  font-size: 15px;
+  margin: 0 0 20px 0;
+}
+
+#presets {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  cursor: default;
+}
+
+#preset-1 {
+  margin-bottom: 8px;
+}
+#preset-2 {
+  margin-bottom: 14px;
+}
+
+/**
+ * Font section
+ */
+
+#font-section {
+}
+
+/**
+ * Color and alignment section
+ */
+
+#color-and-alignment-section .row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+#color-select {
+  flex: 1;
+}
+
+#alignment-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -5px;
+  margin-left: 10px;
+}
+#alignment-buttons[hidden] {
+  display: none;
+}
+
+#alignment-buttons > ee-button {
+  width: 28px;
+  height: 28px;
+}

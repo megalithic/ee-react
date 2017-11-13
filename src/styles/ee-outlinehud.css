@@ -1,0 +1,23 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  contain: size layout style paint;
+  pointer-events: none;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+#outline {
+  fill: none;
+  stroke: red;
+  stroke-width: 1;
+  contain: layout style;
+  pointer-events: none;
+  vector-effect: non-scaling-stroke;
+}

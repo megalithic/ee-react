@@ -1,0 +1,27 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 15px;
+}
+
+#type-select {
+  flex: 1;
+  margin-left: 8px;
+}
+:host([filltypeselecthidden]) #type-select {
+  display: none;
+}
+
+#opacity-slider {
+  margin-bottom: 0;
+}

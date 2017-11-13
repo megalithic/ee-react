@@ -1,0 +1,61 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+  contain: size layout style paint;
+  overflow: hidden;
+  outline: none;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-user-select: none;
+}
+
+svg {
+  background: white;
+}
+
+#side-buttons {
+  background: white;
+  border: 1px solid #a2a5aa;
+  color: #86898e;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  display: flex;
+  flex-flow: row;
+}
+
+#side-buttons .button {
+  padding: 7px 16px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+}
+#side-buttons .button[data-selected] {
+  background: #a2a5ac;
+  color: white;
+}
+#side-buttons .button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+#side-buttons .button:active {
+  background: rgba(0, 0, 0, 0.15);
+}
+#side-buttons .button[data-selected]:hover {
+  background: #8b8d92;
+}
+#side-buttons .button[data-selected]:active {
+  background: #716666;
+}

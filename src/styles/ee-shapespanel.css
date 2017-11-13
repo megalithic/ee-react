@@ -1,0 +1,127 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  height: 100%;
+}
+:host([enabled]) {
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  padding: 28px 19px 37px;
+}
+
+main > section {
+  padding: 0;
+  border: none;
+}
+main > section:hover:not([disabled]) {
+  background: none;
+}
+
+/**
+ * Search section
+ */
+
+#search-section {
+  display: flex;
+  flex-flow: column;
+}
+
+#status-message {
+  margin-top: 25px;
+  font-size: 13px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  text-align: center;
+}
+#status-message p {
+  color: #d0d0d0;
+  margin: 0 0 1px 0;
+}
+
+#throbber {
+  margin: 40px auto;
+}
+#throbber[hidden] {
+  display: none;
+}
+#throbber img {
+  width: 60px;
+  height: 60px;
+}
+#throbber p {
+  margin: 10px 0 0 0;
+  font-size: 13px;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+/**
+ * Thumbnails section
+ */
+
+#thumbnails-section {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+#thumbnails {
+  flex: 1;
+  overflow-y: scroll;
+  margin-top: 20px;
+  width: calc(100% + 12px); /* Make the scrollbar appear outside the div */
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+#thumbnails .thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  box-sizing: border-box;
+  padding: 3px;
+  margin: 0 6px 6px 0;
+  border-radius: 4px;
+  position: relative;
+}
+#thumbnails .thumbnail:nth-child(3n) {
+  margin-right: 0;
+}
+
+#thumbnails .thumbnail img {
+  width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  touch-action: none;
+}
+#thumbnails .thumbnail:hover img {
+  filter: invert() brightness(400%);
+}
+
+#thumbnails .thumbnail .edit-metadata-button {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  right: 0;
+  color: white;
+  background: #ea8917;
+  padding: 2px 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+#thumbnails .thumbnail:hover .edit-metadata-button {
+  display: block;
+}

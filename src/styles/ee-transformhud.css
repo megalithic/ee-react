@@ -1,0 +1,63 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  contain: size layout style paint;
+  cursor: default;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+#dark-bbox-outline,
+#dark-normal-outline {
+  stroke: white;
+  stroke-width: 1;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+#bright-bbox-outline,
+#bright-normal-outline {
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 4;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+#scale-grippies > .grippie {
+  fill: white;
+  stroke: #666666;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-light-1);
+}
+#scale-grippies > .grippie:hover,
+#scale-grippies > .grippie[data-dragged] {
+  fill: yellow;
+}
+
+#rotate-grippie-rect {
+  fill: white;
+  stroke: #6b6b6b;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-light-1);
+}
+#rotate-grippie:hover #rotate-grippie-rect,
+#rotate-grippie[data-dragged] #rotate-grippie-rect {
+  fill: yellow;
+}
+
+#rotate-grippie-icon {
+  pointer-events: none;
+  stroke: none;
+  fill: rgba(0, 0, 0, 0.5);
+}

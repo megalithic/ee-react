@@ -1,0 +1,34 @@
+
+/*
+ * @copyright
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+}
+
+#control-line-1,
+#control-line-2 {
+  fill: none;
+  stroke: red;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+#control-point-1-grippie,
+#control-point-2-grippie {
+  fill: red;
+  stroke: none;
+  pointer-events: none;
+  opacity: 1;
+}
+
+#outline {
+  fill: none;
+  stroke: red;
+  stroke-width: 2.5;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}

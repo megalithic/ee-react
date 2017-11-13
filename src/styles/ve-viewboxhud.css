@@ -1,0 +1,116 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  display: none;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+#outline {
+  fill: none;
+  opacity: 1;
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-width: 1;
+  pointer-events: none;
+  vector-effect: non-scaling-stroke;
+  /*
+  shape-rendering: crispEdges;
+  */
+}
+
+:host([editable][enabled]) #outline {
+  stroke-dasharray: 3;
+}
+:host([editable][enabled]) #outline {
+  display: initial;
+}
+
+/**
+ * Editing controls
+ */
+
+#editing-controls {
+  display: none;
+}
+:host([editable][enabled]) #editing-controls {
+  display: initial;
+}
+
+#inner-area {
+  fill: rgba(0, 0, 0, 0);
+  opacity: 1;
+  shape-rendering: crispEdges;
+  stroke: rgb(106, 106, 106);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+:host([editable][enabled]) #inner-area {
+  stroke-dasharray: 3;
+}
+#inner-area:hover {
+  cursor: -webkit-grab;
+}
+#inner-area:active {
+  cursor: -webkit-grabbing;
+}
+
+#outer-area {
+  fill: black;
+  stroke: none;
+  opacity: 0.4;
+}
+
+.resize-grippie[data-position="left"],
+.resize-grippie[data-position="right"],
+.resize-grippie[data-position="top"],
+.resize-grippie[data-position="bottom"] {
+  stroke: red;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 6;
+  opacity: 0;
+}
+.resize-grippie[data-position="top-left"] path,
+.resize-grippie[data-position="top-right"] path,
+.resize-grippie[data-position="bottom-left"] path,
+.resize-grippie[data-position="bottom-right"] path {
+  fill: white;
+  stroke: rgb(88, 88, 88);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.resize-grippie[data-position="top-left"],
+.resize-grippie[data-position="top-right"],
+.resize-grippie[data-position="bottom-left"],
+.resize-grippie[data-position="bottom-right"] {
+  fill: white;
+  stroke: #666666;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  filter: url(#grippie-shadow-light-2);
+}
+.resize-grippie[data-position="left"]:hover,
+.resize-grippie[data-position="right"]:hover {
+  cursor: ew-resize;
+}
+.resize-grippie[data-position="top"]:hover,
+.resize-grippie[data-position="bottom"]:hover {
+  cursor: ns-resize;
+}
+.resize-grippie[data-position="top-left"]:hover {
+  cursor: nwse-resize;
+}
+.resize-grippie[data-position="top-right"]:hover {
+  cursor: nesw-resize;
+}
+.resize-grippie[data-position="bottom-left"]:hover {
+  cursor: nesw-resize;
+}
+.resize-grippie[data-position="bottom-right"]:hover {
+  cursor: nwse-resize;
+}

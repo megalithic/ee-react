@@ -1,0 +1,79 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+}
+
+main {
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 3px 5px;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  cursor: text;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+main[data-highlighted] {
+  outline: 3px solid #238be7;
+}
+main[data-highlighted][data-invalid] {
+  outline: 3px solid red;
+}
+
+.item {
+  display: inline-block;
+  height: 30px;
+  font-size: 13px;
+  line-height: 30px;
+  border: 1px solid #cccccc;
+  margin: 0 6px 6px 0;
+  padding: 0px 8px;
+  background: rgba(0, 0, 0, 0.04);
+  color: #484848;
+  font-size: 13px;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.item#editable-item {
+  outline: none;
+  background: none;
+  border: 1px solid transparent;
+  flex-grow: 1;
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.item .icon {
+  fill: #848484;
+  width: 11px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.item .icon:hover {
+  cursor: pointer;
+}
+.item .icon use {
+  pointer-events: none;
+}
+
+#placeholder {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  pointer-events: none;
+  color: #a9a9a9;
+  font-size: 13px;
+}

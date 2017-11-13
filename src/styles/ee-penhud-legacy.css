@@ -1,0 +1,20 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2012-2016 Jarosław Foksa
+ */
+
+:host {
+  display: none;
+  contain: size layout style paint;
+}
+:host([enabled]) {
+  display: initial;
+}
+
+#node-grippies .node-grippie {
+  fill: red;
+  stroke: none;
+  opacity: 1;
+}

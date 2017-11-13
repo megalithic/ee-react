@@ -1,0 +1,85 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  height: 100%;
+}
+:host([enabled]) {
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  padding: 28px 32px 37px;
+}
+
+/**
+ * Search section
+ */
+
+#search-section {
+  display: flex;
+  flex-flow: column;
+}
+
+#status-message {
+  margin-top: 15px;
+  font-size: 13px;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  opacity: 0.6;
+}
+
+/**
+ * Thumbnails section
+ */
+
+#thumbnails-section {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+#thumbnails {
+  flex: 1;
+  overflow-y: scroll;
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+#thumbnails .thumbnail {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid transparent;
+  width: 45%;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 3px;
+  align-self: center;
+  margin: 0 10% 10% 0;
+  padding: 3px;
+  border-radius: 4px;
+}
+#thumbnails .thumbnail:nth-child(even) {
+  margin-right: 0;
+}
+#thumbnails .thumbnail:hover {
+  border: 3px solid #ea8917;
+  border-radius: 4px;
+}
+
+#thumbnails .thumbnail img {
+  width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  touch-action: none;
+}

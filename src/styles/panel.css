@@ -1,0 +1,21 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+main > section {
+  padding: 28px 32px;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+main > section:hover:not([disabled]) {
+  background: #595959;
+}

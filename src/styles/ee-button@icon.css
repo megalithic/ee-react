@@ -1,0 +1,50 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  width: 36px;
+  height: 36px;
+  display: block;
+  --icon-size: 24px;
+  --icon-color: white;
+}
+:host(:hover) {
+  cursor: pointer;
+}
+:host([disabled]) {
+  pointer-events: none;
+  opacity: 0.6;
+}
+:host([hidden]) {
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon {
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--icon-color);
+  opacity: 0.7;
+  stroke: none;
+  pointer-events: none;
+}
+:host(:hover) #icon,
+:host([pressed]) #icon {
+  opacity: 1;
+}
+
+label {
+  display: none;
+}

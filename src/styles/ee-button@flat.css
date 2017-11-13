@@ -1,0 +1,85 @@
+
+/*
+ * @info
+ *   Skin used e.g. by "File", "Undo", "Redo", "Duplicate" and "Exit Editor" menubar buttons.
+ *
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  height: 45px;
+  display: block;
+  --icon-size: 12px;
+  --font-size: 18px;
+  --primary-color: #fff;
+}
+:host(:hover) {
+  cursor: pointer;
+}
+:host([disabled]) {
+  pointer-events: none;
+  opacity: 0.6;
+}
+:host([hidden]) {
+  display: none;
+}
+
+main {
+  padding: 0 11px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+}
+
+#background {
+  opacity: 0;
+  position: absolute;;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+:host(:hover:not([disabled])) #background,
+:host([pressed]) #background {
+  background: var(--primary-color);
+  opacity: 0.2;
+}
+:host(:active:not([pressed])) #background {
+  background: var(--primary-color);
+  opacity: 0.4;
+}
+
+#icon {
+  display: none;
+}
+:host([icon]) #icon {
+  display: block;
+  width: var(--icon-size);
+  min-width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+  margin-left: 5px;
+}
+:host(:hover) #icon,
+:host([pressed]) #icon {
+  fill: white;
+}
+
+label {
+  overflow: hidden;
+  color: var(--primary-color);
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: var(--font-size);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-feature-settings: var(--heading-font-features);
+  pointer-events: none;
+}

@@ -1,0 +1,40 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+}
+
+main {
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 3px 5px;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  cursor: text;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+main[data-highlighted] {
+  outline: 3px solid #238be7;
+}
+main[data-highlighted][data-invalid] {
+  outline: 3px solid red;
+}
+#items {
+  border: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#items:focus {
+  outline-width: 0;
+}

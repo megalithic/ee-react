@@ -1,0 +1,96 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  contain: layout style paint;
+  background: white;
+  border: 1px solid #929292;
+  border-radius: 20px;
+  width: 585px;
+  height: 400px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+:host(:focus) {
+  outline: none;
+}
+:host::backdrop {
+  background: rgba(53, 53, 53, 0.34902);
+}
+
+main {
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+li:before {
+  content: "•"
+}
+
+a {
+  color: #ff9a00;
+  text-decoration: none;
+}
+
+#buttons {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: left;
+}
+
+#ok-button {
+  color: white;
+  --primary-color: #ff9a00;
+  --font-size: 14px;
+  margin-left: 10px;
+}
+#ok-button:hover {
+  --primary-color: gray;
+  color: white;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  color: #7f8384;
+}
+
+h2 {
+  margin-top: -5px;
+  font-size: 25px;
+  color: #3a3e3c;
+  font-weight: 600;
+  text-align: left;
+}
+
+.copyright-link-wrapper {
+	margin-left: 10px;
+  width: 90%;
+}
+
+#copyright-link {
+	background: #f7f7f7;
+	color: #474747;
+	cursor: pointer;
+	font-size: 14px;
+	margin-bottom: 35px;
+	outline: none;
+	padding: 10px 15px;
+	border: 2px solid #d5d5d5;
+	-webkit-box-shadow: inset 0 6px 10px -7px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 0 6px 10px -7px rgba(0,0,0,0.2);
+	box-shadow: inset 0 6px 10px -7px rgba(0,0,0,0.2);
+	-webkit-background-clip: padding-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: 100%
+}

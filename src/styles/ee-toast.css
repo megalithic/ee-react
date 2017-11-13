@@ -1,0 +1,78 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+  height: 30px;
+  left: 50%;
+  position: fixed;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 450px;
+}
+
+main {
+  align-items: center;
+  background: #FAEDC7;
+  border: 1px solid #A69469;
+  border-radius: 3px;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+}
+
+.message-action {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #A69469;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+#action-button {
+  width: 25px;
+  height: 25px;
+  fill: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+#zoom-out-button {
+  margin-left: 5px;
+}
+#zoom-in-button {
+  margin-right: 5px;
+}
+#zoom-out-button:hover,
+#zoom-in-button:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.5)
+}
+
+#zoom-out-button svg,
+#zoom-in-button svg {
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+}
+
+#message {
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #A69469;
+  flex: 1;
+  cursor: default;
+}

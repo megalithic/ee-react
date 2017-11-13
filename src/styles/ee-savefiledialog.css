@@ -1,0 +1,87 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  contain: layout style paint;
+  background: white;
+  border: 1px solid #929292;
+  border-radius: 20px;
+  width: 585px;
+  height: 350px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+:host(:focus) {
+  outline: none;
+}
+:host::backdrop {
+  background: rgba(53, 53, 53, 0.34902);
+}
+
+main {
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+a#x-link {
+  background: url(/components/eezy-editor/images/close.svg) center no-repeat;
+  background-size: 15px;
+  width: 34px;
+  height: 34px;
+  text-indent: -999em;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  color: #7f8384;
+}
+
+h2 {
+  font-size: 25px;
+  color: #3a3e3c;
+  margin-top: 37px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+}
+
+#buttons-next-row {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+}
+
+#ok-button {
+  margin-top: 20px;
+  color: white;
+  --primary-color: #ff9a00;
+  --font-size: 14px;
+}
+#ok-button:hover {
+  --primary-color: gray;
+  color: white;
+}
+#cancel-button {
+  --primary-color: #7b7e81;
+  --font-size: 14px;
+  margin-top: 5px;
+  margin-left: 20px;
+}

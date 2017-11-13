@@ -1,0 +1,73 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: block;
+  height: 36px;
+  width: 100%;
+  cursor: default;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+:host(:focus) {
+  outline: none;
+}
+:host(:hover) {
+  background: #585858;
+}
+:host([selected]) {
+  height: 0;
+}
+:host([blink="off"]) {
+  background: transparent;
+}
+:host([blink="on"]) {
+  background: #585858;
+}
+
+/**
+ * Slots
+ */
+
+::slotted(ee-colorswatch) {
+  pointer-events: none;
+}
+
+::slotted(ee-label) {
+  color: #bbbbbb;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/**
+ * Containers
+ */
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+  -webkit-user-select: none;
+}
+
+section {
+  display: flex;
+  padding: 0 14px;
+}
+
+#default-section {
+}

@@ -1,0 +1,13 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+:host {
+  display: none;
+  height: 100%;
+}
+:host([enabled]) {
+  display: block;
+}

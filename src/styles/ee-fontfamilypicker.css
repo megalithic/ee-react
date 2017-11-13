@@ -1,0 +1,63 @@
+
+/*
+ * @copyright
+ *   © 2016 Eezy Inc.
+ *   © 2014-2016 Jarosław Foksa
+ */
+
+:host {
+  width: 100%;
+  height: 160px; /*245px;*/
+  display: block;
+  contain: size layout style;
+  opacity: 0.6;
+}
+:host(:focus) {
+  outline: none;
+}
+:host([enabled]) {
+  opacity: 1;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+#search-input {
+  margin-bottom: 10px;
+}
+
+#items-placehodler {
+  display: none;
+  opacity: 0.5;
+  margin: 10px 0 0 13px;
+  font-size: 13px;
+}
+
+#items-outer {
+  width: 100%;
+  height: calc(100% - 45px);
+  position: relative;
+  background: #525252;
+}
+
+#items-inner {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+#items-inner .item {
+  margin-left: 8px;
+}
+
+:host([enabled]) #items-inner .item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+:host([enabled]) #items-inner .item[data-selected] {
+  background: #ea8917;
+}
+#items-inner .item[hidden] {
+  display: none;
+}
