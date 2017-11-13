@@ -1,17 +1,16 @@
-
 /*
  * @copyright
  *   © 2016 Eezy Inc.
  */
 
-:host {
+.primary-sidebar {
   min-width: 328px;
 }
-:host([collapsed]) {
+.primary-sidebar[collapsed] {
   min-width: 74px;
 }
 
-main {
+.primary-sidebar > main {
   background: #393939;
   color: #ccc;
   height: 100%;
@@ -21,7 +20,7 @@ main {
   -webkit-user-select: none;
 }
 
-#buttons {
+.buttons {
   display: flex;
   flex-flow: column;
   flex: 0;
@@ -32,10 +31,10 @@ main {
   box-sizing: border-box;
 }
 
-#buttons ee-button {
+.buttons .button {
   border-bottom: 1px solid #515151;
 }
-#buttons #help-button {
+.buttons #help-button {
   margin-top: auto;
 }
 :host([templatespanelhidden]) #buttons #templates-button {

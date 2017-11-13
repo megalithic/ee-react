@@ -1,4 +1,3 @@
-
 /*
  * @info
  *   Skin used e.g. by "File", "Undo", "Redo", "Duplicate" and "Exit Editor" menubar buttons.
@@ -7,25 +6,25 @@
  *   © 2016 Eezy Inc.
  */
 
-:host {
+.button {
   height: 45px;
   display: block;
   --icon-size: 12px;
   --font-size: 18px;
   --primary-color: #fff;
 }
-:host(:hover) {
+.button:hover {
   cursor: pointer;
 }
-:host([disabled]) {
+.button[disabled] {
   pointer-events: none;
   opacity: 0.6;
 }
-:host([hidden]) {
+.button[hidden] {
   display: none;
 }
 
-main {
+.button > main {
   padding: 0 11px;
   width: 100%;
   height: 100%;
@@ -39,19 +38,19 @@ main {
 
 #background {
   opacity: 0;
-  position: absolute;;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 4px;
 }
-:host(:hover:not([disabled])) #background,
-:host([pressed]) #background {
+.button:hover:not([disabled]) #background,
+.button[pressed] #background {
   background: var(--primary-color);
   opacity: 0.2;
 }
-:host(:active:not([pressed])) #background {
+.button:active:not([pressed]) #background {
   background: var(--primary-color);
   opacity: 0.4;
 }
@@ -59,7 +58,7 @@ main {
 #icon {
   display: none;
 }
-:host([icon]) #icon {
+.button[icon] #icon {
   display: block;
   width: var(--icon-size);
   min-width: var(--icon-size);
@@ -68,15 +67,16 @@ main {
   stroke: var(--primary-color);
   margin-left: 5px;
 }
-:host(:hover) #icon,
-:host([pressed]) #icon {
+.button:hover #con,
+.button[pressed] #icon {
   fill: white;
 }
 
-label {
+#label {
   overflow: hidden;
   color: var(--primary-color);
-  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'proxima-nova', 'ProximaNova-Regular', 'Helvetica Neue',
+    'Helvetica', sans-serif;
   font-size: var(--font-size);
   white-space: nowrap;
   text-overflow: ellipsis;

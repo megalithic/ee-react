@@ -1,4 +1,3 @@
-
 /*
  * @info
  *   Skin used by the "Select", "Search", "Type", "Bkground" and "Help" sidebar links.
@@ -7,19 +6,19 @@
  *   © 2016 Eezy Inc.
  */
 
-:host {
+.button {
   width: 55px;
   height: 55px;
   display: block;
 }
-:host([disabled]) {
+.button[disabled] {
   pointer-events: none;
 }
-:host([hidden]) {
+.button[hidden] {
   display: none;
 }
 
-main {
+.button > main {
   padding: 0 14px;
   position: relative;
   width: 100%;
@@ -31,26 +30,27 @@ main {
   align-items: center;
   background: transparent;
 }
-:host(:hover) main {
+.button:hover main {
   cursor: pointer;
   background: #464646;
 }
-:host([pressed]) main {
+.button[pressed] > main {
   background: #515151;
 }
-:host(:active) main {
+.button:active > main {
   -webkit-filter: brightness(125%);
 }
-:host([pressed]:active) main {
+.button[pressed]:active > main {
   -webkit-filter: brightness(110%);
 }
 
-label {
+.button label {
   display: none;
   overflow: hidden;
   pointer-events: none;
   color: #333;
-  font: 700 11px/25px "proxima-nova", "ProximaNova-Bold", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 700 11px/25px 'proxima-nova', 'ProximaNova-Bold', 'Helvetica Neue',
+    'Helvetica', sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 0 8px;
@@ -58,26 +58,27 @@ label {
   height: 25px;
   left: 63px;
   border-radius: 2px;
-  background: rgba(255,255,255,.85);
+  background: rgba(255, 255, 255, 0.85);
   text-align: center;
 }
-label::before {
-  content: "";
+
+.button label::before {
+  content: '';
   display: block;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 4.5px 5px 4.5px 0;
-  border-color: transparent rgba(255,255,255,.85) transparent transparent;
+  border-color: transparent rgba(255, 255, 255, 0.85) transparent transparent;
   position: absolute;
   left: -4.5px;
   top: 50%;
   margin-top: -4.5px;
 }
-:host([disabled]) label {
+.button[disabled] label {
   opacity: 0.5;
 }
-:host(:hover) main label {
+.button:hover > main label {
 }
 
 #icon {
@@ -88,16 +89,19 @@ label::before {
   pointer-events: none;
 }
 
-:host([pressed]) main #icon,
-:host(:hover) main #icon {
+.button[pressed] main #icon,
+.button:hover main #icon {
   fill: #fff;
   stroke: #fff;
 }
-:host(:hover) main label {
+.button:hover main label {
   color: #333;
   display: block;
   overflow: visible;
 }
-:host([pressed]) main label {
+.button[pressed] main label {
   color: #333;
+}
+.help {
+  margin-top: auto;
 }

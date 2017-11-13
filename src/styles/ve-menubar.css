@@ -1,4 +1,3 @@
-
 /*
  * @info
  *   Menubar skin (the horizontal bar shown at the top of the editor, contains buttons suchas "File", "Undo",
@@ -8,12 +7,12 @@
  *   © 2016 Eezy Inc.
  */
 
-:host {
+#menubar {
   outline: none;
   display: block;
 }
 
-main {
+#menubar > main {
   background: #ea8917;
   color: white;
   height: 64px;
@@ -41,6 +40,7 @@ main {
   display: block;
   margin-top: 4px;
   margin-left: 5px;
+  color: white;
 }
 
 #logo img {
@@ -57,12 +57,12 @@ main {
   margin-left: 14px;
 }
 
-#primary-buttons ee-button {
+#primary-buttons .button {
   width: auto;
   --font-size: 16px;
   --primary-color: #fbfbbc;
 }
-#primary-buttons ee-button:hover {
+#primary-buttons .button:hover {
   --primary-color: white;
 }
 

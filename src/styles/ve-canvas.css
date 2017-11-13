@@ -1,10 +1,9 @@
-
 /*
  * @copyright
  *   © 2016 Eezy Inc.
  */
 
-:host {
+.canvas {
   display: block;
   width: 100%;
   height: 100%;
@@ -13,7 +12,7 @@
   outline: none;
 }
 
-main {
+.canvas main {
   width: 100%;
   height: 100%;
   overflow: hidden;

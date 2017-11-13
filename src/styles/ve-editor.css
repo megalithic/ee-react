@@ -1,4 +1,3 @@
-
 /*
  * @info
  *   The root element of the Eezy Editor.
@@ -7,10 +6,10 @@
  *   © 2016 Eezy Inc.
  */
 
-:host {
+#editor {
   display: none;
 }
-:host([enabled]) {
+#editor[enabled] {
   display: block;
   position: fixed;
   top: 0;
@@ -20,7 +19,7 @@
   z-index: 999;
 }
 
-main {
+#editor > main {
   display: flex;
   flex-flow: column;
   height: 100%;
