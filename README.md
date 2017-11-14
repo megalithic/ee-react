@@ -2,6 +2,18 @@
 
 The react-based version of the Eezy Editor; to deprecate the web-components version we have now.
 
+## The Stack
+
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- KonvaJS or FabricJS - TBD
+- [Jest](https://facebook.github.io/jest/)
+- [Enzyme](https://github.com/airbnb/enzyme)
+- [Cypress](https://www.cypress.io/)
+
 ## Setup
 
 ### 1.)  Install OS pre-requisites
