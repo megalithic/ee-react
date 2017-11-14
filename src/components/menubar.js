@@ -5,7 +5,7 @@ import logo from '../images/logo-vecteezy.svg';
 
 export const Menubar = ({children}) => {
   return (
-    <header className={styles.menubar} id="menubar">
+    <header className={styles.menubar} data-test-id="menubar" id="menubar">
       <main>
         <div data-test-id="overlay" className={styles.overlay} hidden />
 

@@ -45,6 +45,8 @@ yarn # or `npm install` if you don't have `yarn` installed
 
 ## Development
 
+Application files all live under `./src/`.
+
 #### Run the things
 
 ```sh
@@ -55,7 +57,7 @@ Open http://localhost:3000 in your browser to view the thing
 
 ## Testing
 
-We use [Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html) for unit testing, and [Cypress](https://cypress.io) for integration testing.
+We use [Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html) for unit testing, and [Cypress](https://cypress.io) for integration testing. Integration test files live under `./cypress/integration`, and the unit test files live along side the implementations in `./src/`.
 
 #### Install testing dependencies
 

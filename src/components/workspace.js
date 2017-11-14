@@ -6,7 +6,7 @@ import styles from '../styles/workspace.css';
 
 export const Workspace = ({children}) => {
   return (
-    <div id="workspace" className={styles.workspace}>
+    <div id="workspace" data-test-id="workspace" className={styles.workspace}>
       <PrimarySidebar />
       <Canvas>{children}</Canvas>
     </div>

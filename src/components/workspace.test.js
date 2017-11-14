@@ -1,10 +1,13 @@
 import {Workspace} from './workspace';
 
 describe('<Workspace />', () => {
+  const comp = mount(<Workspace />);
+
   it('renders a primary sidebar', () => {
-    // const component = mount(<Workspace />);
-    // expect(component.find('PrimarySidebar')).to.have.length(1);
+    expect(comp.find('[data-test-id="primary-sidebar"]')).toBePresent();
   });
 
-  it('renders a canvas', () => {});
+  it('renders a canvas', () => {
+    expect(comp.find('[data-test-id="canvas"]')).toBePresent();
+  });
 });
