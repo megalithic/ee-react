@@ -4,9 +4,9 @@ The react-based version of the Eezy Editor; to deprecate the web-components vers
 
 ## Setup
 
-#### 1.) Install OS pre-requisites
+#### 1.)  Install OS pre-requisites
 
-> `node` ***required*** [8.x (latest LTS)](https://github.com/nodejs/Release#release-schedule) / `yarn` optional, but recommended
+> `node` **required** [8.x (latest LTS)](https://github.com/nodejs/Release#release-schedule) / `yarn` optional, but recommended. You can always check `.node-version` for required `node` version.
 
 ##### macOS
 
@@ -17,14 +17,14 @@ brew install yarn
 
 ##### Debian/Ubuntu
 
-- Installing node
+- Install `node`
 
 ```sh
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-- Installing yarn
+- Install `yarn`
 
 ```sh
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -32,7 +32,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-#### 2.) Install project dependencies
+#### 2.)  Install project dependencies
 
 ```sh
 nvm use # assuming you are using `nvm` for version managing, otherwise, make sure you are using `node-8.x`
@@ -64,14 +64,14 @@ brew install --HEAD watchman
 
 #### Run the things
 
-Integration Tests
+- Integration Tests
 
 ```sh
 yarn run cypress:open # gui test runner
 yarn run cypress:run # cli test runner
 ```
 
-Unit Tests
+- Unit Tests
 
 ```sh
 yarn test # Runs Jest in file watch mode
