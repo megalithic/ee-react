@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import BaseContainer from './base-container';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {Menubar} from '../components/menubar.js';
 import {Workspace} from '../components/workspace.js';
@@ -6,7 +7,7 @@ import {Workspace} from '../components/workspace.js';
 import '../styles/base.css';
 import styles from '../styles/app.css';
 
-class App extends Component {
+class App extends BaseContainer {
   static propTypes = {
     artworkId: PropTypes.string,
   };
