@@ -14,6 +14,7 @@ export const Button = ({
 }) => {
   const styles = require(`../styles/ee-button@${skin}.css`);
   const classNames = cc([
+    'btn',
     styles.button,
     styles[`${moduleClassName}`],
     className,
