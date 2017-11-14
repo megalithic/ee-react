@@ -13,7 +13,7 @@ yarn # or `npm install` if you don't have `yarn` installed
 
 ### Development
 
-##### Commands to run thangs
+##### Run the things
 
 ```sh
 yarn start # fires up a handy dashboard for webpack stuff
@@ -21,5 +21,30 @@ yarn start # fires up a handy dashboard for webpack stuff
 ```
 
 ### Testing
+
+We use [Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html) for unit testing, and [Cypress](https://cypress.io) for integration testing.
+
+##### Install dependencies
+
+```sh
+# [Watchman](https://facebook.github.io/watchman/docs/install.html) - used for Jest and file watching
+# macOS
+brew install --HEAD watchman
+```
+
+##### Run the things
+
+Integration Tests
+
+```sh
+yarn run cypress:open # gui test runner
+yarn run cypress:run # cli test runner
+```
+
+Unit Tests
+
+```sh
+yarn test # Runs Jest in file watch mode
+```
 
 ##### Coming Soon

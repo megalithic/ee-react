@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import logo from '../images/logo.svg';
 import {Menubar} from '../components/menubar.js';
 import {Workspace} from '../components/workspace.js';
 
