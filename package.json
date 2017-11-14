@@ -51,6 +51,8 @@
     "start": "webpack-dashboard -- node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "test:watch": "node scripts/test.js --env=jsdom --watch",
+    "test:coverage": "node scripts/test.js --env=jsdom --coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
@@ -61,6 +63,7 @@
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setup.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -99,6 +102,9 @@
   "devDependencies": {
     "cypress": "^1.0.3",
     "enzyme": "^3.1.1",
-    "enzyme-to-json": "^3.2.2"
+    "enzyme-adapter-react-16": "^1.0.4",
+    "enzyme-to-json": "^3.2.2",
+    "jest-enzyme": "^4.0.1",
+    "jsdom": "^11.3.0"
   }
 }
