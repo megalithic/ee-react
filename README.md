@@ -6,7 +6,7 @@ The react-based version of the Eezy Editor; to deprecate the web-components vers
 
 #### Install OS pre-requisites
 
-> `node` required: [8.x (latest LTS)](https://github.com/nodejs/Release#release-schedule) / `yarn` optional, but recommended
+> `node` ***required*** [8.x (latest LTS)](https://github.com/nodejs/Release#release-schedule) / `yarn` optional, but recommended
 
 ##### macOS
 
@@ -16,7 +16,7 @@ brew install yarn
 ```
 
 ##### Debian/Ubuntu
-```
+
 - Installing node
 
 ```sh
