@@ -51,7 +51,7 @@ yarn # or `npm install` if you don't have `yarn` installed
 yarn start # fires up a handy dashboard for webpack stuff
 ```
 
-Open http://localhost:3000 in your browser to run the thing
+Open http://localhost:3000 in your browser to view the thing
 
 ## Testing
 
