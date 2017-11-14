@@ -68,7 +68,7 @@ brew install --HEAD watchman
 
 #### Run the things
 
-Integration Tests (the app must be running as well)
+Integration Tests (*note:* the app must be running as well)
 
 ```sh
 yarn run cypress:open # gui test runner
@@ -78,5 +78,8 @@ yarn run cypress:run # cli test runner
 Unit Tests
 
 ```sh
-yarn test # Runs Jest in file watch mode
+yarn test
+yarn test -- path/to/test.js # runs a single test file
+yarn test:watch # Runs Jest in file watch mode
+yarn test:coverage # Runs Jest test coverage metrics
 ```
