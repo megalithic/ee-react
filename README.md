@@ -64,7 +64,7 @@ brew install --HEAD watchman
 
 #### Run the things
 
-- Integration Tests
+- Integration Tests (the app must be running as well)
 
 ```sh
 yarn run cypress:open # gui test runner
