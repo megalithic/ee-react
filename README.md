@@ -1,28 +1,20 @@
-# Eezy Editor (React-stack)
+# Eezy Editor
 
-The React-based stack version of the Eezy Editor; to deprecate the web-components version we have now.
+The react-based version of the Eezy Editor; to deprecate the web-components version we have now.
 
 ## Setup
 
-#### OS Pre-requisites
+#### Install OS pre-requisites
 
-##### macOS users
+##### macOS
 
 ```sh
 brew install node
 brew install yarn
-brew install inkscape #assuming you haven't already installed it
 ```
 
-##### Debian/Ubuntu users
-
-- Installing inkscape (assuming you haven't already installed it previously)
-
-```sh
-sudo apt-get update
-sudo apt-get install inkscape
+##### Debian/Ubuntu
 ```
-
 - Installing node
 
 ```sh
@@ -55,7 +47,7 @@ yarn start # fires up a handy dashboard for webpack stuff
 
 Open http://localhost:3000 in your browser to run the thing
 
-### Testing
+## Testing
 
 We use [Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html) for unit testing, and [Cypress](https://cypress.io) for integration testing.
 
