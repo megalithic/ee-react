@@ -4,7 +4,7 @@ The react-based version of the Eezy Editor; to deprecate the web-components vers
 
 ## Setup
 
-1) #### Install OS pre-requisites
+#### 1.) Install OS pre-requisites
 
 > `node` ***required*** [8.x (latest LTS)](https://github.com/nodejs/Release#release-schedule) / `yarn` optional, but recommended
 
@@ -32,7 +32,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-2) #### Install project dependencies
+#### 2.) Install project dependencies
 
 ```sh
 nvm use # assuming you are using `nvm` for version managing, otherwise, make sure you are using `node-8.x`
