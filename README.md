@@ -4,15 +4,16 @@ The react-based version of the Eezy Editor; to deprecate the web-components vers
 
 ## The Stack
 
-- [React](https://reactjs.org/)
-- [Redux](https://redux.js.org/)
-- [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [CSS Modules](https://github.com/css-modules/css-modules)
-- KonvaJS or FabricJS - TBD
-- [Jest](https://facebook.github.io/jest/)
-- [Enzyme](https://github.com/airbnb/enzyme)
-- [Cypress](https://www.cypress.io/)
+- [react](https://reactjs.org/)
+- [redux (we're using redux-thunks)](https://redux.js.org/)
+- [react-redux-router](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
+- [webpack](https://webpack.js.org/)
+- [babel](https://babeljs.io/)
+- [css modules](https://github.com/css-modules/css-modules)
+- konvaJS or fabricJS - TBD
+- [jest (unit tests)](https://facebook.github.io/jest/)
+- [enzyme (react matchers and test helpers)](https://github.com/airbnb/enzyme)
+- [cypress (integration tests)](https://www.cypress.io/)
 
 ## Setup
 
