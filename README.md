@@ -98,6 +98,17 @@ yarn test:watch # Runs Jest in file watch mode
 yarn test:coverage # Runs Jest test coverage metrics
 ```
 
+#### For the (neo)vim fam
+
+If you use [vim-test](https://github.com/janko-m/vim-test), have a look at the included `.vimrc`. It provides an easy way to run integration or unit tests. You'll need to have your `~/.vimrc` or `~/.config/nvim/init.vim` setup to support per project `.vimrc` settings.
+
+To do that, simply add the following to your (neo)vim config:
+
+```viml
+set exrc
+set secure
+```
+
 ## Build / Deployment
 
 Coming soon...

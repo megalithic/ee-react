@@ -1,6 +1,9 @@
 describe('Base editor loading', function() {
-  it('should ensure the editor loads', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3000');
+  });
+
+  it('should ensure the editor loads', () => {
     cy.title().should('include', 'Eezy Editor');
   });
 });
