@@ -55,9 +55,10 @@
   opacity: 0.4;
 }
 
-#icon {
+.button #icon {
   display: none;
 }
+
 .button[icon] #icon {
   display: block;
   width: var(--icon-size);
@@ -67,12 +68,13 @@
   stroke: var(--primary-color);
   margin-left: 5px;
 }
-.button:hover #con,
+
+.button:hover #icon,
 .button[pressed] #icon {
   fill: white;
 }
 
-#label {
+.label {
   overflow: hidden;
   color: var(--primary-color);
   font-family: 'proxima-nova', 'ProximaNova-Regular', 'Helvetica Neue',

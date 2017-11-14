@@ -44,7 +44,7 @@
   -webkit-filter: brightness(110%);
 }
 
-.button label {
+.label {
   display: none;
   overflow: hidden;
   pointer-events: none;
@@ -62,7 +62,7 @@
   text-align: center;
 }
 
-.button label::before {
+.label::before {
   content: '';
   display: block;
   width: 0;
@@ -75,10 +75,9 @@
   top: 50%;
   margin-top: -4.5px;
 }
-.button[disabled] label {
+
+.button[disabled] .label {
   opacity: 0.5;
-}
-.button:hover > main label {
 }
 
 #icon {
@@ -94,14 +93,13 @@
   fill: #fff;
   stroke: #fff;
 }
-.button:hover main label {
+
+.button:hover main .label {
   color: #333;
   display: block;
   overflow: visible;
 }
-.button[pressed] main label {
+
+.button[pressed] main .label {
   color: #333;
-}
-.help {
-  margin-top: auto;
 }

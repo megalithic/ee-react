@@ -1,19 +1,19 @@
 import React from 'react';
 import {Button} from './button';
-import styles from '../styles/ve-menubar.css';
+import styles from '../styles/menubar.css';
 import logo from '../images/logo-vecteezy.svg';
 
 export const Menubar = ({children}) => {
   return (
-    <div id={styles.menubar}>
+    <header className={styles.menubar} id="menubar">
       <main>
-        <div id={styles.overlay} hidden />
+        <div data-test-id="overlay" className={styles.overlay} hidden />
 
-        <a id={styles.logo} href="/">
+        <a data-test-id="logo" className={styles.logo} href="/">
           <img alt="Free Vector Art at Vecteezy" src={logo} title="Vecteezy" />
         </a>
 
-        <div id={styles['primary-buttons']}>
+        <nav className={styles.primary}>
           <Button
             id="file-button"
             label="File"
@@ -43,18 +43,24 @@ export const Menubar = ({children}) => {
             skin="flat"
             commandid="duplicate"
           />
-        </div>
+        </nav>
 
-        <div id={styles['secondary-buttons']}>
-          <ee-button id="download-button" label="Download" skin="raised" />
-          <ee-button
+        <nav className={styles.secondary}>
+          <Button
+            className="download__button"
+            id="download-button"
+            label="Download"
+            skin="raised"
+          />
+          <Button
+            className="exit__button"
             id="exit-button"
             label="Exit Editor"
             skin="flat"
             icon="arrow-right"
             commandid="preExit"
           />
-        </div>
+        </nav>
 
         <div id={styles.menus}>
           <ee-menu id="file-menu">
@@ -143,6 +149,6 @@ export const Menubar = ({children}) => {
 
         <ee-downloadpopup id={styles['download-popup']} />
       </main>
-    </div>
+    </header>
   );
 };

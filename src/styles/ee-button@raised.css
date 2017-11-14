@@ -1,4 +1,3 @@
-
 /*
  * @info
  *   Skin used e.g. by the "Download" menubar button (the green button in the top right corner).
@@ -7,7 +6,7 @@
  *   © 2016 Eezy Inc.
  */
 
-:host {
+.button {
   height: 45px;
   display: block;
   color: white;
@@ -16,22 +15,26 @@
   --primary-color: #a4d71e;
   --font-size: 18px;
 }
-:host([disabled]) {
+
+.button([disabled]) {
   pointer-events: none;
   opacity: 0.5;
 }
-:host([hidden]) {
+
+.button([hidden]) {
   display: none;
 }
-:host(:hover) {
+
+.button(:hover) {
   cursor: pointer;
   -webkit-filter: brightness(110%);
 }
-:host([pressed]) {
+
+.button([pressed]) {
   -webkit-filter: brightness(125%);
 }
 
-main {
+.button > main {
   padding: 0 18px;
   width: 100%;
   height: 100%;
@@ -40,24 +43,26 @@ main {
   justify-content: center;
   align-items: center;
 }
-:host(:acitve) main {
+.button(:acitve) main {
   opacity: 0.2;
 }
 
-label {
+.label {
   overflow: hidden;
   pointer-events: none;
   color: inherit;
-  font-family: "proxima-nova", "ProximaNova-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'proxima-nova', 'ProximaNova-Regular', 'Helvetica Neue',
+    'Helvetica', sans-serif;
   font-size: var(--font-size);
   white-space: nowrap;
   text-overflow: ellipsis;
   text-transform: capitalize;
 }
-:host([disabled]) label {
+
+.button([disabled]) .label {
   opacity: 0.5;
 }
 
-#icon {
+.button #icon {
   display: none;
 }

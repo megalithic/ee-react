@@ -3,14 +3,17 @@
  *   © 2016 Eezy Inc.
  */
 
-.primary-sidebar {
+.sidebar {
   min-width: 328px;
+  flex: 0;
+  border-top: 1px solid #2b2b2b;
 }
-.primary-sidebar[collapsed] {
+
+.sidebar[collapsed] {
   min-width: 74px;
 }
 
-.primary-sidebar > main {
+.sidebar > main {
   background: #393939;
   color: #ccc;
   height: 100%;
@@ -34,10 +37,12 @@
 .buttons .button {
   border-bottom: 1px solid #515151;
 }
-.buttons #help-button {
+
+.buttons :global #help-button {
   margin-top: auto;
 }
-:host([templatespanelhidden]) #buttons #templates-button {
+
+.sidebar[templatespanelhidden] #buttons #templates-button {
   display: none;
 }
 
@@ -49,6 +54,7 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-:host([animating]) #panels * {
+
+.sidebar[animating] #panels * {
   display: none;
 }

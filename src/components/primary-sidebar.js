@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '../styles/ve-primarysidebar.css';
+import styles from '../styles/primary-sidebar.css';
 import {Button} from './button.js';
 
-export const PrimarySidebar = ({children, id}) => {
+export const PrimarySidebar = ({children}) => {
   return (
-    <div id={id} className={styles['primary-sidebar']}>
+    <div data-test-id="primary-sidebar" className={styles.sidebar}>
       <main>
         <div className={styles.buttons}>
           <Button id="select" icon="select" label="Select" skin="sidebar" />
@@ -28,13 +28,7 @@ export const PrimarySidebar = ({children, id}) => {
             label="Templates"
             skin="sidebar"
           />
-          <Button
-            id="help"
-            icon="help"
-            label="Help"
-            skin="sidebar"
-            className="help"
-          />
+          <Button id="help-button" icon="help" label="Help" skin="sidebar" />
         </div>
       </main>
     </div>

@@ -1,32 +1,28 @@
-.wrapper {
-  text-align: center;
+/*
+ * @info
+ *   The root element of the Eezy Editor.
+ *
+ * @copyright
+ *   © 2016 Eezy Inc.
+ */
+
+.editor {
+  display: none;
 }
 
-.logo {
-  animation: logo-spin infinite 20s linear;
-  height: 80px;
+.editor[enabled] {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
 }
 
-.header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.title {
-  font-size: 1.5em;
-}
-
-.intro {
-  font-size: large;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editor > main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background: #ebeced;
 }

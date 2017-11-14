@@ -1,24 +1,23 @@
-
 /*
  * @copyright
  *   © 2016 Eezy Inc.
  */
 
-:host {
+.button {
   width: 36px;
   height: 36px;
   display: block;
   --icon-size: 24px;
   --icon-color: white;
 }
-:host(:hover) {
+.button(:hover) {
   cursor: pointer;
 }
-:host([disabled]) {
+.button([disabled]) {
   pointer-events: none;
   opacity: 0.6;
 }
-:host([hidden]) {
+.button([hidden]) {
   display: none;
 }
 
@@ -40,11 +39,11 @@ main {
   stroke: none;
   pointer-events: none;
 }
-:host(:hover) #icon,
-:host([pressed]) #icon {
+.button(:hover) #icon,
+.button([pressed]) #icon {
   opacity: 1;
 }
 
-label {
+.label {
   display: none;
 }

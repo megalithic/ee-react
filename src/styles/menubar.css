@@ -7,12 +7,13 @@
  *   © 2016 Eezy Inc.
  */
 
-#menubar {
+.menubar {
   outline: none;
   display: block;
+  width: 100%;
 }
 
-#menubar > main {
+.menubar > main {
   background: #ea8917;
   color: white;
   height: 64px;
@@ -22,7 +23,7 @@
   -webkit-user-select: none;
 }
 
-#overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,59 +33,62 @@
   background: black;
   opacity: 0.1;
 }
-#overlay[hidden] {
+
+.overlay[hidden] {
   display: none;
 }
 
-#logo {
+.logo {
   display: block;
   margin-top: 4px;
   margin-left: 5px;
   color: white;
 }
 
-#logo img {
+.logo img {
   width: 122px;
 }
 
-#app-name a {
-  text-decoration: none;
-  color: inherit;
-}
-
-#primary-buttons {
+.primary {
   display: flex;
   margin-left: 14px;
 }
 
-#primary-buttons .button {
+.primary .button {
   width: auto;
   --font-size: 16px;
   --primary-color: #fbfbbc;
 }
-#primary-buttons .button:hover {
+
+.primary .button:hover {
   --primary-color: white;
 }
 
-#secondary-buttons {
+.secondary {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
 
-#secondary-buttons #download-button {
+:global #download-button {
   margin-right: 8px;
   color: #ea8917;
   --primary-color: #fcef95;
   --font-size: 16px;
   height: 40px;
 }
-#secondary-buttons #download-button:hover {
+
+:global #download-button:hover {
   background: #fef8ad;
   -webkit-filter: none;
 }
 
-#exit-button {
+:global #exit-button {
   --font-size: 16px;
   height: 40px;
+}
+
+:global #download-button label,
+:global #exit-button label {
+  margin-bottom: 0;
 }

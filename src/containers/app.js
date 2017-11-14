@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {Menubar} from '../components/menubar.js';
 import {Workspace} from '../components/workspace.js';
 
-import '../styles/html.css';
-import styles from '../styles/ve-editor.css';
+import '../styles/base.css';
+import styles from '../styles/app.css';
 
 class App extends Component {
   static propTypes = {
@@ -17,8 +17,9 @@ class App extends Component {
     return (
       <div
         data-random="true"
+        id="editor"
         resourceid=""
-        id={styles.editor}
+        className={styles.editor}
         artworkid={artworkId}
         enabled="true"
         tabIndex="1"

@@ -10,6 +10,7 @@
   contain: size layout style paint;
   overflow: hidden;
   outline: none;
+  flex: 1;
 }
 
 .canvas main {

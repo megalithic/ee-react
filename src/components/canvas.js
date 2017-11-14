@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../styles/ve-canvas.css';
+import styles from '../styles/canvas.css';
 
-export const Canvas = ({children, id}) => {
+export const Canvas = ({children}) => {
   return (
-    <div id={id} className={styles.canvas}>
+    <div data-test-id="canvas" className={styles.canvas}>
       <main>{children}</main>
     </div>
   );

@@ -1,20 +1,19 @@
-
 /*
  * @copyright
  *   © 2016 Eezy Inc.
  *   © 2012-2016 Jarosław Foksa
  */
 
-:host {
+.button {
   width: 100px;
   height: 34px;
   display: block;
   --icon-size: 26px;
 }
-:host([disabled]) {
+.button([disabled]) {
   pointer-events: none;
 }
-:host([hidden]) {
+.button([hidden]) {
   display: none;
 }
 
@@ -35,54 +34,56 @@ main {
   border-radius: 0;
   border: 1px solid #3a3a3a;
   background: #4b4b4b;
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.26) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.11);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.26) inset,
+    0px 1px 0px 0px rgba(255, 255, 255, 0.11);
 }
-:host([pressed]) main {
+.button([pressed]) main {
   background: #ea8917;
   border: none;
 }
-:host(:active) main {
+.button(:active) main {
   -webkit-filter: brightness(125%);
 }
-:host(:hover) main {
+.button(:hover) main {
   -webkit-filter: brightness(110%);
 }
-:host([pressed]:active) main {
+.button([pressed]:active) main {
   -webkit-filter: brightness(110%);
 }
 
 #icon {
   display: none;
 }
-:host([icon]) #icon {
+.button([icon]) #icon {
   display: block;
   width: var(--icon-size);
   min-width: var(--icon-size);
   height: var(--icon-size);
-  fill: #C6C8CC;
+  fill: #c6c8cc;
 }
-:host([disabled]) #icon {
+.button([disabled]) #icon {
   opacity: 0.6;
 }
 
-label {
+.label {
   overflow: hidden;
   color: #ffffff;
   opacity: 0.85;
-  font-family: "proxima-nova", "ProximaNova-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'proxima-nova', 'ProximaNova-Semibold', 'Helvetica Neue',
+    'Helvetica', sans-serif;
   font-weight: 600;
   font-size: 12px;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-feature-settings: var(--heading-font-features);
 }
-:host([pressed]) label {
+.button([pressed]) label {
   opacity: 1;
 }
-:host([icon]) label:not(:empty) {
+.button([icon]) label:not(:empty) {
   margin-left: 7px;
 }
 
-:host([disabled]) label {
+.button([disabled]) label {
   opacity: 0.5;
 }
