@@ -1,4 +1,4 @@
-This is a compendium of all of the current features in the present day [eezy-editor](https://github.com/eezyinc/eezy-editor) application.
+This is a compendium of all of the current features in the present day [editor](http://www.vecteezy.com/editor) application ([eezy-editor repo](https://github.com/eezyinc/eezy-editor)).
 
 - Home
   - Tools
