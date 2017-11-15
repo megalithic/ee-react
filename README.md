@@ -113,3 +113,14 @@ set secure
 ## Build / Deployment
 
 Coming soon...
+
+## TODO
+
+[] add in `prettier` for auto-linting as a git-hook
+[] specify the build/deployment process
+[] tie in circle-ci build status (tests, coverage, etc)
+[] make determination of using FabricJS or KonvaJS
+[] build out higher order components for level of inheritance to flip between types of editors
+[] add basic tests for actions and reducers
+[] start work on wiki to document the structure and general idioms for this app
+
