@@ -1,39 +1,15 @@
-import BaseContainer from './base-container';
-import React from 'react';
-import PropTypes from 'prop-types';
-import {Menubar} from '../components/menubar.js';
-import {Workspace} from '../components/workspace.js';
+import {connect} from 'react-redux';
+import Editor from '../components/editor.js';
 
-import '../styles/base.css';
-import styles from '../styles/app.css';
+// Note: every action creator defined in actions/index.js will get passed to
+// the target component below as props.
+import * as mapDispatchToProps from '../actions';
 
-class App extends BaseContainer {
-  static propTypes = {
-    artworkId: PropTypes.string,
-  };
+// Which part of the Redux global state does our component want to receive as props?
+// Eventually, we'll want to be more explicit about which reducers to use, and
+// even be able to pass them through a model parser.
+const mapStateToProps = state => ({
+  ...state,
+});
 
-  render() {
-    const {artworkId} = this.props;
-
-    return (
-      <div
-        data-random="true"
-        id="editor"
-        resourceid=""
-        className={styles.editor}
-        artworkid={artworkId}
-        enabled="true"
-        tabIndex="1"
-      >
-        <main>
-          <Menubar />
-          <Workspace>
-            <p> Editor things. </p>
-          </Workspace>
-        </main>
-      </div>
-    );
-  }
-}
-
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps.default)(Editor);
