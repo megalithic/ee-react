@@ -3,21 +3,22 @@ This is a compendium of all of the current features, interactions, and interface
 - Home
   - Tools
     - Select
-      - Selection Size [H] [W]
+      - Selection Size
+        - H: [0] W: [0]
       - ---
-      - Fill Settings 
+      - Fill Settings
         - Color picker
-        - Type [Solid/Linear/Radial]
+        - Fill type [Solid/Linear/Radial]
       - Fill Transparency
-        - Slider
+        - Slider (100)
       - ---
       - Stroke Settings
         - Color picker
-        - Order [Above/Below]
+        - Stroke order [Above/Below]
       - Stroke  Transparency
-        - Slider
+        - Slider (100)
       - Stroke Size
-        - Slider
+        - Slider (10)
       - ---
       - Arrange & Flip
         - Raise (button)
@@ -34,11 +35,57 @@ This is a compendium of all of the current features, interactions, and interface
       - Show Rulers (on/off toggle) - default: off
       - Show Outlines (on/off toggle) - default: off
     - Type
+      - `Click or drag to add text`
+        - Large Text (need to get font family)
+        - Medium Text (need to get font family)
+        - Small Text (need to get font family)
+      - ---
+      - Typeface
+        - dropdown (autocomplete) with type faces
+        - dropdown with font styles (normal, italic, bold, thin)
+      - ---
+      - Color
+        - color picker
+      - ---
+      - Transparency
+        - slider (100)
+      - Size
+        - slider (50)
+      - Letter Spacing
+        - slider (0)
+      - Line Curve
+        - slider (0)
     - Background
+      - Background Size
+        - H: [] W: []
+      - ---
+      - Fill Settings
+        - Color picker
+        - Fill type [Solid/Linear/Radial]
+      - Fill Transparency
+        - Slider (0)
     - Pen
+      - Fill Settings
+        - color picker
+      - Fill Transparency
+        - slider (100)
+      - ---
+      - Stroke Settings
+        - Color picker
+        - Stroke order [Above/Below]
+      - Stroke Transparency
+        - Slider (100)
+      - Stroke Size
+        - Slider (10)
     - Elements
+      - Search box (with element type dropdown button [all/shapes/illustrations])
+      - Element type box buttons
+        - Shapes
+        - Illustrations
+      - Async loading of elements based on type and search query string
     - Templates
     - Help
+      - redirects to https://support.vecteezy.com/hc/en-us/categories/115000042227-Editor-App
   - Zoom (+/-)
   - Zendesk Chat
   - `This is a temporary file. [Sign up] or [Log in] to save your work.`

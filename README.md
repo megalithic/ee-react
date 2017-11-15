@@ -23,6 +23,7 @@ All documentation for setup, usage, code stuffs, etc, is **[now on the wiki](htt
 ## TODO
 
 - [ ] add in `prettier` for auto-linting as a git-hook
+- [ ] set up ENV variables for each type of environment: development, staging, production (dotenv?)
 - [ ] specify the build/deployment process
 - [ ] tie in circle-ci build status (tests, coverage, etc)
 - [ ] make determination of using FabricJS or KonvaJS
