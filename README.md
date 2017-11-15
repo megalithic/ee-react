@@ -17,7 +17,7 @@ The react-based version of the Eezy Editor; to deprecate the web-components vers
 
 ## Setup and Usage
 
-All documentation for setup, usage, code stuffs is now on our **[ wiki ](wiki)**
+All documentation for setup, usage, code stuffs, etc, is **[now on the wiki](https://github.com/megalithic/ee-react/wiki)**.
 
 ## TODO
 
