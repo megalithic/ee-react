@@ -3,7 +3,7 @@ describe('Primary Sidebar Interactions', function() {
   let btn;
 
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('http://localhost:8000');
     sidebar = cy.get('[data-test-id="primary-sidebar"]').first();
     btn = sidebar.get('.btn#select').first();
   });
