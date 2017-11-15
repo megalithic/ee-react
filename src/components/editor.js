@@ -1,4 +1,4 @@
-import BaseContainer from './base-container';
+import BaseComponent from './base-component';
 import {Menubar} from '../components/menubar.js';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,7 +7,7 @@ import {Workspace} from '../components/workspace.js';
 import '../styles/base.css';
 import styles from '../styles/app.css';
 
-class App extends BaseContainer {
+class Editor extends BaseComponent {
   static propTypes = {
     artworkId: PropTypes.string,
   };
@@ -36,4 +36,4 @@ class App extends BaseContainer {
   }
 }
 
-export default App;
+export default Editor;

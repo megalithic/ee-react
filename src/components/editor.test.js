@@ -1,7 +1,7 @@
-import App from './app.js';
+import Editor from './editor.js';
 
-describe('<App />', () => {
-  const comp = mount(<App />);
+describe('<Editor />', () => {
+  const comp = mount(<Editor />);
 
   it('renders a menubar', () => {
     expect(comp.find('[data-test-id="menubar"]')).toBePresent();

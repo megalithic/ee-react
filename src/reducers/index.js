@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import {routerReducer} from 'react-router-redux';
-import {uiReducer} from './ui-reducer';
+import {ui as uiReducer} from './ui-reducer';
 
 const appReducer = combineReducers({
   routing: routerReducer,
