@@ -1,16 +1,16 @@
-This is a compendium of all of the current features in the present day [editor](http://www.vecteezy.com/editor) application ([eezy-editor repo](https://github.com/eezyinc/eezy-editor)).
+This is a compendium of all of the current features, interactions, and interface elements in the present day [editor](http://www.vecteezy.com/editor) application ([eezy-editor repo](https://github.com/eezyinc/eezy-editor)).
 
 - Home
   - Tools
     - Select
       - Selection Size [H] [W]
-      - -
+      - ---
       - Fill Settings 
         - Color picker
         - Type [Solid/Linear/Radial]
       - Fill Transparency
         - Slider
-      - -
+      - ---
       - Stroke Settings
         - Color picker
         - Order [Above/Below]
@@ -18,7 +18,7 @@ This is a compendium of all of the current features in the present day [editor](
         - Slider
       - Stroke Size
         - Slider
-      - -
+      - ---
       - Arrange & Flip
         - Raise (button)
         - Lower (button)
@@ -30,7 +30,7 @@ This is a compendium of all of the current features in the present day [editor](
         - Align Top Edges (button)
         - Align Vertical Centers (button)
         - Align Bottom Edges (button)
-      - -
+      - ---
       - Show Rulers (on/off toggle) - default: off
       - Show Outlines (on/off toggle) - default: off
     - Type
