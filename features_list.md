@@ -120,7 +120,6 @@ This is a compendium of all of the current features, interactions, and interface
   - Add Template
   - Import History
 - Download *(has checkbox agreement in the prompt)*
-  - SVG
-  - PNG
-  - JPG
+  - dropdown (SVG/PNG/JPG)
+  - Download button
 - Exit Editor
