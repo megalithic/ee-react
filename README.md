@@ -10,7 +10,7 @@ The react-based version of the Eezy Editor; to deprecate the web-components vers
 - [webpack](https://webpack.js.org/)
 - [babel](https://babeljs.io/)
 - [css modules](https://github.com/css-modules/css-modules)
-- konvaJS or fabricJS - TBD
+- [konvaJS](https://konvajs.github.io/) or [ fabricJS ](http://fabricjs.com/) - TBD
 - [jest (unit tests)](https://facebook.github.io/jest/)
 - [enzyme (react matchers and test helpers)](https://github.com/airbnb/enzyme)
 - [cypress (integration tests)](https://www.cypress.io/)
