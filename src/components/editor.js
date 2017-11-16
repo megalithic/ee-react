@@ -5,7 +5,7 @@ import React from 'react';
 import {Workspace} from '../components/workspace.js';
 
 import '../styles/base.css';
-import styles from '../styles/app.css';
+import styles from '../styles/editor.css';
 
 class Editor extends BaseComponent {
   static propTypes = {
