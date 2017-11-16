@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import icons from '../images/icons.svg';
 
 export const Button = ({
-  label,
   children,
+  className,
   icon,
   id,
-  className,
+  label,
   moduleClassName,
+  onClick,
+  pressed,
   skin,
 }) => {
   const styles = require(`../styles/ee-button@${skin}.css`);
@@ -20,8 +22,26 @@ export const Button = ({
     className,
   ]);
 
+  const handleOnClick = () => {
+    onClick({
+      container: '',
+      el: 'button',
+      id,
+      state: {
+        action: 'pressed',
+        value: !pressed,
+      },
+    });
+  };
+
   return (
-    <div id={id} className={classNames} icon={icon || undefined}>
+    <div
+      id={id}
+      className={classNames}
+      icon={icon || undefined}
+      onClick={handleOnClick}
+      pressed={pressed}
+    >
       <main>
         <div id={styles.background} />
         <svg id={styles.icon} preserveAspectRatio="none" viewBox="0 0 100 100">

@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import {UPDATE_UI} from '../constants/ui-types';
 
-export const updateUi = ({container, el, id, state}) => {
+export const updateUi = ({container, el, id, state}) => dispatch => {
   // TODO: setup analytics to capture events
-  return {
+  return dispatch({
     data: {
       container,
       el,
@@ -11,5 +11,5 @@ export const updateUi = ({container, el, id, state}) => {
       state,
     },
     type: UPDATE_UI,
-  };
+  });
 };

@@ -12,23 +12,30 @@ class Editor extends BaseComponent {
     artworkId: PropTypes.string,
   };
 
-  render() {
-    const {artworkId} = this.props;
+  componentWillReceiveProps(nextProps) {
+    console.log({nextProps});
+    console.log({currentProps: this.props});
+  }
 
+  handleOnUpdateUi = data => {
+    if (typeof data !== 'undefined') this.props.updateUi(data);
+  };
+
+  render() {
     return (
       <div
         data-random="true"
         id="editor"
         resourceid=""
         className={styles.editor}
-        artworkid={artworkId}
+        artworkid={''}
         enabled="true"
         tabIndex="1"
       >
         <main>
           <Menubar />
           <Workspace>
-            <p> Editor things. This space to be replaced soon'ish. </p>
+            <p>Editor things. This space to be replaced soon'ish.</p>
           </Workspace>
         </main>
       </div>
