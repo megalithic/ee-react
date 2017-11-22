@@ -88,7 +88,8 @@ This is a compendium of all of the current features, interactions, and interface
       - redirects to https://support.vecteezy.com/hc/en-us/categories/115000042227-Editor-App
   - Zoom (+/-)
   - Zendesk Chat
-  - `This is a temporary file. [Sign up] or [Log in] to save your work.`
+  - [Canvas Toast]
+    - `This is a temporary file. [Sign up] or [Log in] to save your work.`
 - File
   - Import SVG
   - Import Photo
